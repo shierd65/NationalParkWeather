@@ -1,0 +1,30 @@
+﻿@model Dictionary<string, int>
+
+@{
+    ViewBag.Title = "SurveyResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Dictionary<string, string> parks = new Dictionary<string, string>()
+    {
+        { "CVNP", "Cuyahoga Valley National Park" },
+        { "ENP", "Everglades National Park" },
+        { "GCNP", "Grand Canyon National Park" },
+        { "GNP", "Glacier National Park" },
+        { "GSMNP", "Great Smoky Mountains National Park" },
+        { "GTNP", "Grand Teton National Park" },
+        { "MRNP", "Mount Rainier National Park" },
+        { "RMNP", "Rocky Mountain National Park" },
+        { "YNP", "Yellowstone National Park" },
+        { "YNP2", "Yosemite National Park" },
+    };
+}
+
+<h2 id="surveyTitle">Thank You for Taking Our Survey</h2>
+@foreach (var item in Model)
+{
+    <img class="resultPic" src="~/Content/img/parks/@(item.Key.ToLower()).jpg" alt="@parks[@item.Key]" />
+
+    <div class="resultWords">
+        <h4>@parks[@item.Key]</h4>
+        <h4>@item.Value Votes</h4>
+    </div>
+}

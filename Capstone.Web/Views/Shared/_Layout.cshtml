@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+</head>
+<body>
+    <header><img id="headerLogo" src="~/Content/img/etc/logo.png" alt="NPGeek Logo" /></header>
+    <nav id="nav">
+        <a class="navLink" href="~/Survey/SurveyInput">Take Daily Survey</a>
+        <a class="navLink" href="~/Park/Parks">Explore Our Parks</a>
+    </nav>
+    <div id="body">
+        @RenderBody()
+    </div>
+
+    <footer></footer>
+</body>
+</html>

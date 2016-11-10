@@ -1,0 +1,147 @@
+﻿body {
+    background-color:#455f45;
+    padding-bottom:4%;
+}
+
+#headerLogo{
+    width:94%;
+}
+
+#body{
+    width:90%;
+    border-radius:10px;
+    margin:auto;
+    background-color:#c1b796;
+}
+
+.pic{
+    width:25%;
+    display:inline-block;
+    margin:1%;
+}
+
+.desc{
+    display:inline-block;
+    vertical-align:top;
+    width:65%;
+}
+
+.detailPic{
+    display:inline-block;
+    margin:2%;
+    width:25%;
+    border: 1px solid black;
+    margin-right:1%;
+}
+
+#quote{
+    display:inline-block;
+    background-color:#8cb1b1;
+    border: 2px groove darkblue;
+    float:right;
+    width: 25%;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 45px;
+    font-style:italic;
+    margin-top: 6%;
+}
+
+.heading{
+    display:inline-block;
+    width:40%;
+    vertical-align:top;
+    text-align: center;
+}
+
+.nameLink{
+    text-decoration: none;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.detailDesc{
+    width:80%;
+    margin:auto;
+}
+
+.table{
+    margin:2%;
+    display:inline-block;
+    width:25%;
+}
+
+.weather{
+    display:inline-block;
+    width:65%;
+    height:56%;
+    margin-top:1%;
+    border:none;
+    margin:auto;
+}
+
+.forecastDisplay{
+    width:15%;
+    display:inline-block;
+    font-weight:bold;
+}
+
+.forecastPic{
+    width:95%;
+
+}
+
+.forecastContainer{
+    width:65%;
+    display:inline-block;
+    vertical-align:top;
+}
+
+#nav{
+    margin-left:60%;
+    margin-bottom:0.5%;
+}
+
+.navLink{
+    text-decoration:none;
+    color:darkblue;
+    margin-left:2%;
+    font-size:1.3em;
+}
+
+#surveyTitle{
+    text-align:center;
+}
+
+#surveyButton{
+    margin-bottom:.4%;
+    width:5.5%;
+    margin-left:45%;
+}
+
+.surveyField{
+    margin-right:31%;
+    margin-bottom:.2%;
+    text-align:right;
+}
+
+.resultWords{
+    display:inline-block;
+    width:22%;
+    vertical-align:top;
+}
+
+.resultPic{
+    width:25%;
+    display:inline-block;
+    margin:1%;
+}
+
+#packingList{
+    margin-left:3%;
+
+}
+
+#forecast{
+    text-align:center;
+}

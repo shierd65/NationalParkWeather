@@ -1,0 +1,20 @@
+﻿@model List<Capstone.Web.Models.ParkModel>
+
+@{
+    ViewBag.Title = "Parks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] descr = new string[8];
+}
+
+@foreach (var park in Model)
+{
+    <div>
+        <a href="@Url.Action("ParkDetail", "Park", new { parkCode = @park.ParkCode })"><img class="pic" src="~/Content/img/parks/@(park.ParkCode.ToLower()).jpg" alt="@park.ParkName" /></a>
+        <div class="desc">
+            <a class="nameLink"href="@Url.Action("ParkDetail", "Park", new { parkCode = @park.ParkCode })"><h4>@park.ParkName</h4></a>
+            <h5>@park.State</h5>
+            @{descr = park.Description.Split('.');}
+            <p>@descr[0]...</p>
+        </div>
+    </div>
+}

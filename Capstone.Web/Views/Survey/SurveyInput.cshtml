@@ -1,0 +1,33 @@
+﻿@model Capstone.Web.Models.SurveyModel
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="surveyTitle">Take Our Daily Survey</h2>
+
+@using (Html.BeginForm("SurveyInput", "Survey", FormMethod.Post))
+{
+    <div class="surveyField">
+        @Html.Label("parkName", "Select your favorite park")
+        @Html.DropDownListFor(m => m.ParkCode, (IEnumerable<SelectListItem>)ViewBag.ParksList, new { style = "width:44%;" })
+        @Html.ValidationMessageFor(a => a.ParkCode)
+    </div>
+    <div class="surveyField">
+        @Html.Label("email", "Enter your e-mail address ")
+        @Html.TextBoxFor(m => m.Email, new { style = "width:44%;" })
+        @Html.ValidationMessageFor(a => a.Email)
+    </div>
+    <div class="surveyField">
+        @Html.Label("state", "Enter State")
+        @Html.TextBoxFor(s => s.State, new { style = "width:44%;" })
+        @Html.ValidationMessageFor(a => a.State)
+    </div>
+    <div class="surveyField">
+        @Html.Label("activityLevel", "Choose your level of activity")
+        @Html.DropDownListFor(s => s.ActivityLevel, (IEnumerable<SelectListItem>)ViewBag.ActivityLevels, new { style = "width:44%;" })
+    </div>
+    <button id="surveyButton">Submit</button>
+}
+

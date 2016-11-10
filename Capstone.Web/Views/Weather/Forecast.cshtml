@@ -1,0 +1,31 @@
+﻿@model Capstone.Web.Models.WeatherForecastModel
+
+<div class="forecastContainer">
+    <div id="forecast">
+        @for (int i = 0; i < 5; i++)
+        {
+            <div class="forecastDisplay">
+                <img class="forecastPic" src="~/Content/img/weather/@(Model.Forecast[i]).png" alt="@Model.Forecast" />
+                <text>@Model.Forecast[i]<br /><br /></text>
+                <text>@Model.High[i]&deg/@Model.Low[i]&deg</text>  @* celsius - &#x2103   fahrenheit - &#x2109*@
+            </div>
+        }
+
+        @using (Html.BeginForm("SavePreferredTemp", "Park", FormMethod.Post, Model.ParkCode))
+        {
+            <div>
+                @Html.RadioButtonFor(f => f.DisplayFahrenheit, true, true) Fahrenheit
+                @Html.RadioButtonFor(f => f.DisplayFahrenheit, false, false) Celsius
+            </div>
+            <button>Convert</button>
+        }
+    </div>
+    <div id="packingList">
+        <h4>Packing List</h4>
+        @foreach (var item in Model.PackingList)
+            {
+            <p>@item</p>
+        }
+    </div>
+</div>
+
